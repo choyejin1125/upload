@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&display=swap" rel="stylesheet">
+<style type="text/css">
+body{
+    font-family: "Bitcount Grid Double Ink", system-ui;
+    background-color:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+form > div{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:250px;
+}
+
+form > div > div:first-child{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+input, select{
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px;
+}
+
+button{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background-color:#4CAF50;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#45a049;
+}
+</style>
+</head>
+<body>
+<form action="output.jsp" onsubmit="return check()">
+		<div>
+			<div>단위변환</div>
+			<div>변환할값</div>
+			<div><input name="num" id="num"> </div>
+			<div>단위</div>
+			<div>
+				<select name="unit">
+					<option value="a">cm -> inch</option>
+					<option value="b">㎡ -> 평</option>
+					<option value="c">℃ -> ℉</option>
+					<option value="d">km/h -> mi/h</option>
+				</select>
+			</div>
+			<div> <button>계산</button> </div>
+		</div>
+	</form>
+	<script type="text/javascript">
+	function check() {
+		const numInput = document.querySelector('#num');
+		if(numInput.value == ''){
+		alert('값이 입력되지 않았어요!')
+		numInput.focus();
+		return false;
+		}
+		
+	}u
+	</script>
+</body>
+</html>

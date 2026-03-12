@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        /* 화면 전체를 사용하여 폼을 정중앙에 배치 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6; /* 부드러운 배경색 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 로그인 폼 컨테이너 디자인 */
+        .login-form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px; /* 둥근 모서리 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 은은한 그림자 효과 */
+            width: 300px;
+        }
+
+        /* 폼 제목 */
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        /* 입력 그룹 영역 (라벨과 인풋) */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555555;
+            font-size: 14px;
+        }
+
+        /* 입력창 디자인 */
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* padding이 width에 포함되도록 설정 */
+            font-size: 14px;
+            transition: border-color 0.3s; /* 테두리 색상 변경 애니메이션 */
+        }
+
+        /* 입력창에 포커스가 갔을 때(클릭했을 때) 효과 */
+        .input-group input:focus {
+            outline: none;
+            border-color: #4CAF50; /* 녹색 테두리로 강조 */
+        }
+
+        /* 로그인 버튼 디자인 */
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* 버튼에 마우스를 올렸을 때 효과 */
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="login_output2.jsp" class="login-form" method="post">
+    <!-- post(url에 아이디 비번 안나오게 함.)해도 아웃풋에 고치지 않아도 됨!!! -->
+    
+        <h2>LOGIN</h2>
+        <div class="input-group">
+            <label for="userId">ID</label>
+            <input type="text" id="userId" name="id" placeholder="아이디를 입력하세요">
+        </div>
+        
+        <div class="input-group">
+            <label for="userPw">PW</label>
+            <input type="password" id="userPw" name="pw" placeholder="비밀번호를 입력하세요">
+        </div>
+        
+        <button type="submit" class="login-btn">Login</button>
+        
+    </form>
+
+</body>
+</html>

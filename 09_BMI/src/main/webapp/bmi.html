@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+    /* 배경 및 화면 중앙 정렬 */
+    body {
+        background-color: #f3ebf6; /* 연한 보라색 배경 */
+        font-family: 'Malgun Gothic', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* 첫 번째 div (BMI 검사 타이틀) */
+    body > div {
+        font-size: 26px;
+        font-weight: 900;
+        color: #5e35b1; /* 진한 보라색 */
+        margin-bottom: 20px;
+    }
+
+    /* 폼 전체를 감싸는 하얀색 배경 (카드 형태) */
+    form {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(103, 58, 183, 0.15);
+        width: 250px;
+    }
+
+    /* 입력 항목 라벨 (이름, 키, 체중) */
+    form > div > div > div {
+        font-size: 14px;
+        font-weight: bold;
+        color: #7e57c2; /* 중간 보라색 */
+        margin: 15px 0 5px 0;
+    }
+
+    /* 텍스트 입력 칸 */
+    input {
+        width: 100%;
+        box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+        padding: 10px;
+        border: 1.5px solid #d1c4e9; /* 연한 보라색 테두리 */
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    /* 입력 칸 클릭 시 색상 변화 */
+    input:focus {
+        border-color: #673ab7;
+        box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.2);
+    }
+
+    /* 계산 버튼 */
+    button {
+        width: 100%;
+        background-color: #673ab7; /* 메인 보라색 */
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    /* 버튼에 마우스 올렸을 때 */
+    button:hover {
+        background-color: #5e35b1; /* 더 어두운 보라색 */
+    }
+</style>
+
+</head>
+<body>
+
+	<div>BMI 검사</div>
+	<form id="myForm" action="bmi.jsp" method="post" enctype="multipart/form-data">
+		<div> 
+			<div>
+				<div>이름</div>		
+				<input name = "name">
+				<div>키(CM)</div>		
+				<input name = "height">
+				<div>체중(KG)</div>	
+				<input name = "weight">	
+			</div>
+			
+			<div>
+				<div>사진</div>
+				<div>
+				<input type="file" name ="imgFile">
+				</div>
+			</div>
+			
+				<button>계산</button>
+		</div>
+	</form>
+
+</body>
+</html>
